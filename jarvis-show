@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Modo show do Jarvis: bata palma 2x para abrir a conversa por voz.
+# Ajustes: JARVIS_CLAP_THRESH (sensibilidade) e JARVIS_MIC (microfone).
+DIR="$(cd "$(dirname "$(readlink -f "$0")")" && pwd)"
+export PATH="$HOME/.local/bin:$PATH"
+cd "$DIR" && exec uv run python voz/jarvis_show.py "$@"
